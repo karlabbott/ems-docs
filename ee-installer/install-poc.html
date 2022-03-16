@@ -261,10 +261,7 @@ by doing:</p>
 <p>Then create a script, <code>start_postgresql</code>:</p>
 <pre><code class="language-bash">#!/bin/bash
 
-docker run -d -p 5432:5432 -v $(pwd)/data:/var/lib/postgresql/data -e
-POSTGRES_PASSWORD=&quot;insert_random_password_here&quot; -e POSTGRES_USER=&quot;element&quot;
--e POSTGRES_DB=&quot;element&quot; -e POSTGRES_INITDB_ARGS=&quot;--encoding UTF8 --locale
-C&quot; docker.io/postgres:latest
+docker run -d -p 5432:5432 -v $(pwd)/data:/var/lib/postgresql/data -e POSTGRES_PASSWORD=&quot;insert_random_password_here&quot; -e POSTGRES_USER=&quot;element&quot; -e POSTGRES_DB=&quot;element&quot; -e POSTGRES_INITDB_ARGS=&quot;--encoding UTF8 --locale C&quot; docker.io/postgres:latest
 </code></pre>
 <p>Now create a directory for the postgresql database:</p>
 <pre><code class="language-bash">mkdir data
