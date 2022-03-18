@@ -177,6 +177,7 @@ environment!</p>
 <li>Postgresql Server</li>
 <li>Element Server</li>
 <li>Synapse Server</li>
+<li>Dimension Server</li>
 </ul>
 <p>These hostnames must resolve to the appropriate IP addresses. If you have a
 proper DNS server with records for these hostnames in place, then you will
@@ -185,6 +186,7 @@ be good to go.</p>
 only. In this case, you will need entries similar to:</p>
 <pre><code class="language-plaintext">192.168.122.39 element.local element
 192.168.122.39 synapse.local synapse
+192.168.122.39 dimension.local dimension
 </code></pre>
 <h2 id="machine-size"><a class="header" href="#machine-size">Machine Size</a></h2>
 <p>For running a proof of concept with our installer, we support only the x86_64
@@ -286,7 +288,7 @@ environment, but will not be supported in a production environment as the
 security risk would be too high. Configuring mobile clients and federation
 will not be possible with self-signed certificates.</p>
 <h3 id="certificates-without-letsencrypt"><a class="header" href="#certificates-without-letsencrypt">Certificates without letsencrypt</a></h3>
-<p>If you have certificates for your Element fqdn and Synapse fqdn already,
+<p>If you have certificates for your Element fqdn, Synapse fqdn, and Dimension fqdn already,
 then you can simply place the <code>.crt</code> and <code>.key</code> files in the certs directory
 under the installer directory. Certificates in the certs directory must take
 the form of <code>fqdn.cert</code> and <code>fqdn.key</code>.</p>
@@ -368,7 +370,7 @@ cp synapse.local+3-key.pem certs/synapse.local.key
 </code></pre>
 <p>If installing dimension later on, go ahead and copy those certs as well:</p>
 <pre><code class="language-bash">cp dimension.local+3.pem certs/dimension.local.crt
-cp dimension.local+3-key.pem certs/dimension.local.key 
+cp dimension.local+3-key.pem certs/dimension.local.key
 </code></pre>
 <h3 id="certificates-with-letsencrypt"><a class="header" href="#certificates-with-letsencrypt">Certificates with LetsEncrypt</a></h3>
 <p>Our installer also supports using LetsEncrypt to build certificates for your
