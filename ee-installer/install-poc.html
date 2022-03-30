@@ -176,7 +176,6 @@ environment!</p>
 <h2 id="hostnamesdns"><a class="header" href="#hostnamesdns">Hostnames/DNS</a></h2>
 <p>You will need hostnames for the following pieces of infrastructure:</p>
 <ul>
-<li>Postgresql Server</li>
 <li>Element Server</li>
 <li>Synapse Server</li>
 <li>Dimension Server</li>
@@ -260,17 +259,15 @@ sudo systemctl disable firewalld
 </code></pre>
 <h3 id="users"><a class="header" href="#users">Users</a></h3>
 <p>The installer requires that you run it as a non-root user who has sudo
-permissions. Please make sure that you have a user in the <code>sudo</code> group
-to complete the install. If you wanted to make a user called <code>element-demo</code>
-and place them in the <code>sudo</code> group, the following commands (run as root) would
+permissions. Please make sure that you have a user who can use <code>sudo</code>. If you wanted to make a user called <code>element-demo</code> that can use <code>sudo</code>, the following commands (run as root) would
 achieve that:</p>
 <p>On Ubuntu:</p>
-<pre><code class="language-bash">sudo useradd element-demo
-sudo gpasswd -a element-demo sudo
+<pre><code class="language-bash">useradd element-demo
+gpasswd -a element-demo sudo
 </code></pre>
 <p>On EL:</p>
-<pre><code class="language-bash">sudo useradd element-demo
-sudo gpasswd -a element-demo wheel
+<pre><code class="language-bash">useradd element-demo
+gpasswd -a element-demo wheel
 </code></pre>
 <h3 id="unpacking-the-installer"><a class="header" href="#unpacking-the-installer">Unpacking the Installer</a></h3>
 <p>Please make sure that you unpack <code>element-enterprise-installer</code> onto your
