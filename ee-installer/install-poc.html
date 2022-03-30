@@ -318,9 +318,8 @@ will not be possible with self-signed certificates.</p>
 <li>dimension.local</li>
 <li>hookshot.local</li>
 </ul>
-<h3 id="certificates-without-letsencrypt"><a class="header" href="#certificates-without-letsencrypt">Certificates without letsencrypt</a></h3>
-<p>If you have certificates for your Element fqdn, Synapse fqdn, and Dimension
-fqdn already,
+<h3 id="certificates-without-letsencrypt"><a class="header" href="#certificates-without-letsencrypt">Certificates without LetsEncrypt</a></h3>
+<p>If you have certificates for all of the aforementioned host names,
 then you can simply place the <code>.crt</code> and <code>.key</code> files in the certs directory
 under the installer directory. Certificates in the certs directory must take
 the form of <code>fqdn.cert</code> and <code>fqdn.key</code>.</p>
@@ -401,7 +400,7 @@ element_fqdn: element.local
 synapse_fqdn: synapse.local
 </code></pre>
 <p>Next, we need to set the variables related to Postgres. If you do not have
-an existing Postgres server, then do not make any changes. If you have an
+an existing Postgres server, do not make any changes. If you have an
 existing Postgres server, set the following:</p>
 <pre><code class="language-bash">postgres_create_in_cluster: false
 postgres_fqdn: `Postgres Server`
