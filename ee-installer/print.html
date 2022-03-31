@@ -148,7 +148,7 @@
 <p>Welcome to the Element Enterprise Installer Documentation! Element Enterprise
 Installer enables you to install Element Enterprise for two purposes:</p>
 <ul>
-<li>Proof of concept on a single node. For this, we use microk8s on Ubuntu.</li>
+<li>Proof of concept on a single node. For this, we use microk8s on Ubuntu or Eneterprise Linux.</li>
 <li>Production on multiple nodes. For this, we will install into an existing
 kubernetes environment.</li>
 </ul>
@@ -189,8 +189,7 @@ to be considered and this guide will work through them:</p>
 <ul>
 <li><a href="install-poc.html#hostnamesdns">Hostnames/DNS</a></li>
 <li><a href="install-poc.html#machine-size">Machine Size</a></li>
-<li><a href="install-poc.html#operating-system">Operating System</a> (We’ve tested on
-Ubuntu Server 20.04)</li>
+<li><a href="install-poc.html#operating-system">Operating System</a></li>
 <li><a href="install-poc.html#users">Users</a></li>
 <li><a href="install-poc.html#network-ports-to-open">Network Ports to Open</a></li>
 <li><a href="install-poc.html#postgresql-database">Postgresql Database</a></li>
@@ -561,7 +560,7 @@ Element Enterprise into your production k8s environment.</p>
 need to be considered and this guide will work through them:</p>
 <ul>
 <li><a href="install-prod.html#hostnamesdns">Hostnames/DNS</a></li>
-<li><a href="install-prod.html#machine-size">Machine Size</a></li>
+<li><a href="install-prod.html#resource-requirements">Resource Requirements</a></li>
 <li><a href="install-prod.html#k8s-environments">k8s Environments</a></li>
 <li><a href="install-prod.html#postgresql-database">Postgresql Database</a></li>
 <li><a href="install-prod.html#turn-server">TURN Server</a></li>
@@ -580,7 +579,7 @@ environment!</p>
 </ul>
 <p>These hostnames must resolve to the appropriate IP addresses. You must have
 a proper DNS server to serve these records in a production environment.</p>
-<h2 id="machine-size-1"><a class="header" href="#machine-size-1">Machine Size</a></h2>
+<h2 id="resource-requirements"><a class="header" href="#resource-requirements">Resource Requirements</a></h2>
 <p>For running running in production, we support only the x86_64
 architecture and recommend the following minimums:</p>
 <ul>
