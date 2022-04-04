@@ -614,7 +614,7 @@ If you want to use
 tls certificates, it needs to be already installed in the targeted k8s cluster.</li>
 </ul>
 <p>If you do not want to deploy directly to kubernetes, but wish to render manifests instead, set all of the above mentioned variables except for <code>k8s_auth_context</code> and define a value for the parameter <code>out_dir</code>, which specifies where to write the kubernetes manifests. Further, when you go to run the installer, you need to invoke it as such:</p>
-<pre><code class="language-bash">sudo install.sh --target render
+<pre><code class="language-bash">bash install.sh --target render
 </code></pre>
 <p>Using the above syntax, you will have a set of manifests written out to <code>out_dir</code> that you can then deploy into your kubernetes environment.</p>
 <h2 id="postgresql-database-1"><a class="header" href="#postgresql-database-1">Postgresql Database</a></h2>
