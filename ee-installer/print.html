@@ -284,10 +284,11 @@ firewall.</p>
 sudo systemctl disable firewalld
 </code></pre>
 <p>Further, you need to make sure that your host is able to access the following hosts on the internet:</p>
-<pre><code>api.snapcraft.io
-gitlab.matrix.org
-pypi.org
-</code></pre>
+<ul>
+<li>api.snapcraft.io</li>
+<li>gitlab.matrix.org</li>
+<li>pypi.org</li>
+</ul>
 <p>Further, you will also need to make sure that your host can access your distributions' package repositories. As these hostnames can vary, it is beyond the scope of this documentation to enumerate them.</p>
 <h3 id="users"><a class="header" href="#users">Users</a></h3>
 <p>The installer requires that you run it as a non-root user who has sudo
